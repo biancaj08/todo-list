@@ -1,16 +1,30 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+This application is a Todo List app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Setup
 
-## React Compiler
+Fork and clone locally: Fork the CTD repository to your GitHub account, then clone your fork to your local machine
+Install dependencies: Run npm install to install all required packages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Start the development server with the command: npm run dev
+Open a browser and navigate to http://localhost:5173.
+Delete the contents of App.css but keep the file.
+Delete the contents of index.css but keep the file.
 
-## Expanding the ESLint configuration
+Clean up App.jsx's code:
+Delete the line containing const [count, setCount] = useState(0)
+Remove all imports except for App.css
+Replace everything in the return statement with a div containing an h1 containing your app's title.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+In App.jsx:
+
+Inside the App component, above the return statement, create an array named todoList containing 3 empty objects.
+Populate each object with a todo using the following object keys: id and title.
+
+Create an unordered list using html tags below the heading (h1).
+Place an empty code block between the list's opening and closing tags. eg:<ul>{}</ul>
+Inside the code block, map over the todoList to wrap each todo title in a list item tag.
+Add the key prop to the list item and pass it the todo's id.
+
